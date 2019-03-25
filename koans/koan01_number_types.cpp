@@ -29,47 +29,47 @@
 void Koan01_number_types::simple_integer_numbers()
 {
   int an_integer = 42;
-  ASSERT_EQUAL( an_integer, FILL_THE_NUMBER_IN );
+  ASSERT_EQUAL( an_integer, 42 );
 }
 
 void Koan01_number_types::integers_have_a_size()
 {
   int an_integer = 1;
-  ASSERT_EQUAL( sizeof( int ), FILL_THE_NUMBER_IN );
-  ASSERT_EQUAL( sizeof( an_integer ), FILL_THE_NUMBER_IN );
+  ASSERT_EQUAL( sizeof( int ), 4 );
+  ASSERT_EQUAL( sizeof( an_integer ), 4 );
 }
 
 void Koan01_number_types::integers_can_be_negative()
 {
   int an_integer =  -42;
   // You might want to substitute ASSERT_EQUAL with ASSERT and use larger-than comparison
-  ASSERT_EQUAL( an_integer, 0 );
+  ASSERT( an_integer > -43 );
 }
 
 void Koan01_number_types::simple_floats()
 {
   float a_float = 4.2;
-  ASSERT_EQUAL( a_float, FILL_THE_NUMBER_IN );
+  ASSERT( a_float > 4.199999 && a_float < 4.2000001 );
 }
 
 void Koan01_number_types::floats_have_a_size()
 {
   float a_float = 4.2;
-  ASSERT_EQUAL( sizeof( float ), FILL_THE_NUMBER_IN );
-  ASSERT_EQUAL( sizeof( a_float ), FILL_THE_NUMBER_IN );
+  ASSERT_EQUAL( sizeof( float ), 4 );
+  ASSERT_EQUAL( sizeof( a_float ), 4 );
 }
 
 void Koan01_number_types::going_double_precision()
 {
   double a_famous_double = 3.1415926535897932;
-  ASSERT_EQUAL_MSG( a_famous_double, FILL_THE_NUMBER_IN, "You know that number." );
+  ASSERT_EQUAL_MSG( a_famous_double, 3.1415926535897932, "You know that number." );
 }
 
 void Koan01_number_types::doubles_have_a_size()
 {
   double a_famous_double = 3.1415926535897932;
-  ASSERT_EQUAL( sizeof( double ), FILL_THE_NUMBER_IN );
-  ASSERT_EQUAL( sizeof( a_famous_double ), FILL_THE_NUMBER_IN );
+  ASSERT_EQUAL( sizeof( double ), 8 );
+  ASSERT_EQUAL( sizeof( a_famous_double ), 8 );
 }
 
 void Koan01_number_types::size_of_biggest_number()
@@ -77,8 +77,8 @@ void Koan01_number_types::size_of_biggest_number()
   // Remember: The size of long doubles vary from system to system.
   long double a_long_double = 4.2;
   // How big is it on your system?
-  ASSERT_EQUAL( sizeof( long double ), FILL_THE_NUMBER_IN );
-  ASSERT_EQUAL( sizeof( a_long_double ), FILL_THE_NUMBER_IN );
+  ASSERT_EQUAL( sizeof( long double ), 8 );
+  ASSERT_EQUAL( sizeof( a_long_double ), 8 );
 }
 
 
